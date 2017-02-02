@@ -1,0 +1,24 @@
+{
+  "name": "tftp-client",
+  "version": "0.0.1",
+  "description": "Simple NodeJS TFTP client",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brianparry/tftp-client.git"
+  },
+  "author": "Brian Parry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brianparry/tftp-client/issues"
+  },
+  "homepage": "https://github.com/brianparry/tftp-client#readme",
+  "dependencies": {
+    "assert-plus": "^1.0.0",
+    "minimist": "^1.2.0",
+    "tftp": "git+https://github.com/brianparry/node-tftp.git"
+  }
+}
