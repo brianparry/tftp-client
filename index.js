@@ -14,8 +14,10 @@ assert.string(reqHost);
 var clientArgs = {
     host: reqHost.split(':')[0],
     port: parseInt(reqHost.split(':')[1]) || 69,
-    timeout: argv.timeout || 3000,
-    blockSize: argv.b || argv.blksize
+    timeout: argv.timeout,
+    blockSize: argv.b || argv.blksize,
+    windowSize: argv.w || argv.windowsize,
+    tsize: argv.t || argv.tsize
 }
 
 
@@ -25,10 +27,9 @@ var methods = {
          client.get(reqFile, cb);
      },
      'put': function(cb) {
-          return cb();
+          return cb(new Error('put is not supported yet'));
      }
 }
-console.log(argv);
 console.log(clientArgs);
 
 if (typeof methods[reqMethod] === 'function') {
